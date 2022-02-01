@@ -42,7 +42,7 @@ body{
 }
 
 .logo:hover{
-    font-size: 35px;
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.685);
 }
 
 .searchbar{
@@ -97,10 +97,7 @@ body{
         align-items: center;
         justify-content: center;
     }
-    .logo:hover{
-        font-size: 30px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.685);
-    }
+    
 }
 
 .menu-toggle{
