@@ -22,7 +22,6 @@ body{
 }
 
 .inner-width{
-    max-width: 1300px;
     margin: auto;
 }
 
@@ -45,20 +44,8 @@ body{
     text-shadow: 3px 3px 3px #00000a6c;
 }
 
-.navbar .logo a{
-    background-color: #d9e9e4;
-    border-radius: 4px;
-    transition: 0.1s radial;
-    box-shadow: 2px 2px 5px #0000006c;
-    padding: 5px 10px;
-}   
-
-.navbar .logo a:hover{
-    background-color: #d9e9e4;
-    border-radius: 4px;
-    transition: 0.1s radial;
-    box-shadow: 2px 2px 5px #000000c9;
-    padding: 5px 10px;
+.logo:hover{
+    font-size: 35px;
 }
 
 .menu-toggle{
@@ -210,7 +197,7 @@ hr{
     opacity: .3;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 3000px) {
     .navbar-menu{
         position: fixed;
         height: 100vh;
