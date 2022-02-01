@@ -19,7 +19,6 @@ body{
 }
 
 .inner-width{
-    max-width: 1300px;
     margin: auto;
 }
 
@@ -42,20 +41,8 @@ body{
     text-shadow: 3px 3px 3px #00000a6c;
 }
 
-.navbar .logo a{
-    background-color: #d9e9e4;
-    border-radius: 4px;
-    transition: 0.1s radial;
-    box-shadow: 2px 2px 5px #0000006c;
-    padding: 5px 10px;
-}   
-
-.navbar .logo a:hover{
-    background-color: #d9e9e4;
-    border-radius: 4px;
-    transition: 0.1s radial;
-    box-shadow: 2px 2px 5px #000000c9;
-    padding: 5px 10px;
+.logo:hover{
+    font-size: 35px;
 }
 
 .searchbar{
@@ -68,6 +55,10 @@ body{
     border-radius: 5px;
     display: inline-flex;
     overflow: hidden;
+}
+
+.searchbar:hover{
+    box-shadow: 2px 2px 5px rgba(29, 26, 26, 0.904);
 }
 
 .searchbar input{
@@ -87,6 +78,31 @@ body{
     padding: 10px;
     position: relative;
 }
+
+/* search bar responsive */
+@media screen and (max-width: 730px) {
+    .logo{
+        font-size: 30px;
+        font-weight: 570;
+    }
+    .searchbar{
+        padding: 0;
+        height: 30px;
+        width: 65%;
+    }
+    .searchbar input{
+        font-size: 15px;
+        padding: 10px 10px;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo:hover{
+        font-size: 30px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.685);
+    }
+}
+
 .menu-toggle{
     background: none;
     width: 30px;
@@ -172,4 +188,21 @@ i{
         transform: rotate(45deg);
         bottom: 14px;
     }
+}
+
+#home{
+    height: 100vh;
+    min-height: 500px;
+}
+.copyright h3{
+    text-shadow: 2px 2px 5px #000000;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 0;
+}
+
+hr{
+    display: block;
+    margin: 0 35% 0.5em;
+    opacity: .3;
 }
