@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #965df3;
+}
+.navbar{
+    position: relative;
+    background-color: #fffffffb;
+    margin: 30px 60px;
+    overflow: hidden;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: .3s linear;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px #3d3d3d;
+}
+
+.inner-width{
+    max-width: 1300px;
+    margin: auto;
+}
+
+.navbar .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    background: -webkit-radial-gradient(ellipse,#ff00b3,#056cf3, #000000a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    line-height: 60px;
+    text-align: center;
+    -webkit-text-stroke: .5px #0513005d;
+    box-sizing: border-box;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px #00000a6c;
+}
+
+.navbar .logo a{
+    background-color: #d9e9e4;
+    border-radius: 4px;
+    transition: 0.1s radial;
+    box-shadow: 2px 2px 5px #0000006c;
+    padding: 5px 10px;
+}   
+
+.navbar .logo a:hover{
+    background-color: #d9e9e4;
+    border-radius: 4px;
+    transition: 0.1s radial;
+    box-shadow: 2px 2px 5px #000000c9;
+    padding: 5px 10px;
+}
+
+.menu-toggle{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 999;
+    display: block;
+}
+
+.menu-toggle span{
+    display: block;
+    height: 3px;
+    background: -webkit-radial-gradient(ellipse,#ff00b3,#05cff3, #140102);
+    margin: 6px 0;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #3f3f3f;
+    transition: .3s linear;
+}
+
+.navbar-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    float: left;
+    padding: 8px 7px;
+    margin-left: 30px;
+    transition: .2s linear;
+}
+
+.navbar-menu a.active{
+    background: #7067ebb0;
+    color: rgb(255, 253, 253);
+    border-radius: 4px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 5px #0000009f;
+}
+.navbar-menu a:hover{
+    background: #7067ebb0;
+    color: rgb(255, 253, 253);
+    border-radius: 4px;
+    transition: 0.5s;
+    box-shadow: 3px 2px 5px #000000b1;
+}
+
+i{
+    padding-right: 10px;
+}
+#home{
+    height: 100vh;
+    min-height: 500px;
+}
+
+#home .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    text-align: center;
+}
+
+#home .content{
+    width: 100%;
+}
+
+#home .content h1{
+    font-size: 50px;
+    margin-bottom: 50px;
+    text-shadow: 3px 2px 5px #000000b1;
+}
+
+#home .content h1::after{
+    content: "Techboy Dk";
+    animation: textanim 10s linear infinite;
+    background: -webkit-radial-gradient(ellipse,#eb01df,#045e5e,#f80303);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes textanim {
+    50%{
+        content: "Developer";
+        background: -webkit-radial-gradient(ellipse,#eb01d8,#0110e7,#ff00f2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100%{
+        content: "Designer";
+        background: -webkit-radial-gradient(ellipse,#01ebeb,#5c5a0b,#41161a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.sm a{
+    color: #15cfe7;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: .2s linear;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 4px #000000b1;
+    background-color: #04083f;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.sm a:hover{
+    color: #02011a;
+    background-color: aquamarine;
+}
+
+#home .button{
+    margin-top: 60px;
+}
+
+#home .button a{
+    display: inline-block;
+    margin: 15px 40px;
+    color: rgb(25, 12, 29);
+    font-weight: 700;
+    font-size: 20px;
+    width: 180px;
+    padding: 5px 0;
+    border: 2px solid;
+    border-radius: 6px;
+    transition: .2s linear;
+}
+
+#home .button a:hover{
+    background: aquamarine;
+    color: rgb(5, 14, 56);
+    box-shadow: 3px 3px 5px #000000b1;
+}
+
+.copyright h3{
+    text-shadow: 2px 2px 5px #000000;
+    text-align: center;
+    background-color: blanchedalmond;
+    padding: 5px 0;
+}
+
+hr{
+    display: block;
+    margin: 0 35% 0.5em;
+    opacity: .3;
+}
+
+@media screen and (max-width: 2000px) {
+    .navbar-menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #0000009f;
+        top: 0;
+        right: -100%;
+        max-width: 300px;
+        padding: 50px 50px;
+        transition: .3s linear;
+    }
+
+    .navbar-menu a{
+        display: block;
+        font-size: 20px;
+        margin: 30px 0;
+        float: none;
+    }
+
+    .navbar-menu.active{
+        right: 0;
+    }
+    .menu-toggle.active span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 4px;
+    }
+    .menu-toggle.active span:nth-child(2){
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3){
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+}
