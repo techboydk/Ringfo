@@ -201,7 +201,7 @@ i{
 #home{
     align-items: center;
     justify-content: center;
-
+    min-height: 100vh;
 }
 #home .text{
     margin: 20px 0 0 20px;
