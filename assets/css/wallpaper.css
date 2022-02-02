@@ -129,6 +129,9 @@ body{
     transition: .3s linear;
 }
 
+.navbar{
+    z-index: 999;
+}
 .navbar-menu a{
     color: #fff;
     font-size: 15px;
@@ -164,7 +167,7 @@ i{
         position: fixed;
         height: 100vh;
         width: 100%;
-        background-color: #0000009f;
+        background-color: #000000;
         top: 0;
         right: -100%;
         max-width: 300px;
