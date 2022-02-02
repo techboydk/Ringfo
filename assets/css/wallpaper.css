@@ -88,11 +88,17 @@ body{
         font-size: 25px;
         font-weight: 100;
     }
-    .searchbar{
-        padding: 0;
-        height: 30px;
-        width: 65%;
-    }
+   .searchbar{
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0 0 0 7px;
+    margin: auto;
+    width: 65%;
+    overflow: hidden;
+    border-radius: 3px;
+    display: inline-flex;
+
+}
     .searchbar input{
         font-size: 15px;
         padding: 10px 10px;
