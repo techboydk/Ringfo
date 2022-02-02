@@ -95,6 +95,18 @@ body{
     box-shadow: 3px 2px 5px #000000b1;
 }
 
+@media screen and (max-width: 730px){
+    .navbar{
+        margin: 30px;
+        padding: 0 15px 0 10px;
+    }
+    .logo{
+        font-size: 32px;
+        line-height: 50px;
+        font-weight:  900;
+    }
+}
+
 i{
     padding-right: 10px;
 }
