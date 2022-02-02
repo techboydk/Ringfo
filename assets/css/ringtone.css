@@ -79,11 +79,15 @@ body{
     position: relative;
 }
 
+
 /* search bar responsive */
 @media screen and (max-width: 730px) {
+    .navbar{
+        padding: 0 10px;
+    }
     .logo{
-        font-size: 30px;
-        font-weight: 570;
+        font-size: 25px;
+        font-weight: 100;
     }
     .searchbar{
         padding: 0;
@@ -97,7 +101,6 @@ body{
         align-items: center;
         justify-content: center;
     }
-    
 }
 
 .menu-toggle{
