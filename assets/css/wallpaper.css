@@ -268,7 +268,7 @@ i{
     }
 }
 
-@media screen and (max-width: 685px) and (max-height: 800px) {
+@media screen and (max-width: 685px) {
     #home .card{
         width: 185px;
     }
@@ -277,7 +277,7 @@ i{
     }
 }
 
-@media screen and (max-width: 645px) and (max-height: 800px) {
+@media screen and (max-width: 645px) {
     #home .card{
         width: 180px;
     }
@@ -286,7 +286,7 @@ i{
     }
 }
 
-@media screen and (max-width: 600px) and (max-height: 800px) {
+@media screen and (max-width: 600px){
     #home .card{
         width: 160px;
     }
@@ -295,7 +295,7 @@ i{
     }
 }
 
-@media screen and (max-width: 550px) and (max-height: 800px) {
+@media screen and (max-width: 550px){
     #home .card{
         width: 220px;
     }
@@ -304,7 +304,7 @@ i{
     }
 }
 
-@media screen and (max-width: 500px) and (max-height: 800px) {
+@media screen and (max-width: 500px) {
     #home .card{
         width: 200px;
     }
@@ -313,7 +313,7 @@ i{
     }
 }
 
-@media screen and (max-width: 450px) and (max-height: 800px) {
+@media screen and (max-width: 450px){
     #home .card{
         width: 180px;
     }
@@ -322,7 +322,7 @@ i{
     }
 }
 
-@media screen and (max-width: 400px) and (max-height: 800px) {
+@media screen and (max-width: 400px)  {
     #home .card{
         width: 160px;
     }
@@ -331,7 +331,7 @@ i{
     }
 }
 
-@media screen and (max-width: 360px) and (max-height: 800px) {
+@media screen and (max-width: 360px) {
     #home .card{
         width: 140px;
     }
@@ -340,7 +340,7 @@ i{
     }
 }
 
-@media screen and (max-width: 320px) and (max-height: 800px) {
+@media screen and (max-width: 320px){
     #home .card{
         width: 120px;
     }
