@@ -197,18 +197,20 @@ i{
 }
 
 #home{
-    height: 100vh;
-    min-height: 500px;
+    min-height: 100vh;
 }
 .copyright h3{
     text-shadow: 2px 2px 5px #000000;
+    position:static;
     text-align: center;
     background-color: rgb(255, 255, 255);
     padding: 5px 0;
+    bottom: 0;
 }
 
 hr{
     display: block;
-    margin: 0 35% 0.5em;
+    margin: 30px 35% 4px;
     opacity: .3;
 }
+
