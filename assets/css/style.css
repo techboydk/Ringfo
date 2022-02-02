@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #965df3;
+    background: -webkit-linear-gradient(45deg,#3260faaf,#02fa5586 20%,#11bcff86 50%, #d502ff); 
 }
 .navbar{
     position: relative;
-    background-color: #fffffffb;
+    background: -webkit-radial-gradient(circle,#cddbcd,#e798ff, #fffb0a); 
     margin: 30px 60px;
     overflow: hidden;
     padding: 0px 20px;
@@ -55,7 +55,7 @@ body{
     cursor: pointer;
     outline: none;
     z-index: 999;
-    display: block;
+    display: none;
 }
 
 .menu-toggle span{
@@ -65,6 +65,7 @@ body{
     margin: 6px 0;
     position: relative;
     box-sizing: border-box;
+    border-radius: 5px;
     box-shadow: 2px 2px 5px #3f3f3f;
     transition: .3s linear;
 }
@@ -95,7 +96,7 @@ body{
     box-shadow: 3px 2px 5px #000000b1;
 }
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 768px){
     .navbar{
         margin: 30px;
         padding: 0 15px 0 10px;
@@ -111,6 +112,7 @@ i{
     padding-right: 10px;
 }
 #home{
+   margin-top: 100px;
     min-height: 100vh;
 }
 
@@ -195,6 +197,104 @@ i{
     box-shadow: 3px 3px 5px #000000b1;
 }
 
+/* animation part start */
+
+.animation{
+    position: relative;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    margin: 150px;
+    animation: colour 2s linear infinite;
+}
+@keyframes gola {
+    
+
+}
+
+.animation span:nth-child(1){
+    display: flex;
+    z-index: 999;
+    height: 10px;
+    position: relative;
+    border-radius: 100px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #3f3f3f;
+    transition: .3s linear;
+    animation: colour 10s linear infinite;
+}
+
+.animation span:nth-child(2){
+    display: flex;
+    z-index: 999;
+    height: 10px;
+    margin: 10px 0 0 0;
+    position: relative;
+    border-radius: 100px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #3f3f3f;
+    transition: .3s linear;
+    animation: colour 10s linear infinite;
+}
+
+.animation span:nth-child(3){
+    display: flex;
+    z-index: 999;
+    height: 10px;
+    margin: 10px 0 0 0;
+    position: relative;
+    border-radius: 100px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #3f3f3f;
+    transition: .3s linear;
+    animation: colour 10s linear infinite;
+}
+
+.rotate{
+    animation: rotation 60s linear infinite;
+}
+
+@keyframes colour {
+    0%{
+        transform: rotate(0deg);
+        background: -webkit-linear-gradient(135deg,#fa02c4,#05f37c, #020301);
+    }
+    25%{
+        transform: rotate(90deg);
+        background: -webkit-radial-gradient(45deg,#02fa02,#6b7c08, #ff0202); 
+    }
+    50%{
+        transform: rotate(180deg);
+        background: -webkit-radial-gradient(circle,#cddbcd,#e798ff, #fffb0a); 
+    }
+    75%{
+        transform: rotate(270deg);
+        background: -webkit-linear-gradient(45deg,#0640ff,#e7e9de, #d502ff); 
+    }
+    100%{
+        transform: rotate(360deg);
+        background: -webkit-linear-gradient(180deg,#cdff57,#00fd0d, #02f7ff); 
+    } 
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* animation part end! */
+
 .copyright h3{
     text-shadow: 2px 2px 5px #000000;
     text-align: center;
@@ -213,12 +313,13 @@ hr{
         position: fixed;
         height: 100vh;
         width: 100%;
-        background-color: #000000;
+        background: -webkit-linear-gradient(45deg,#ff06f3,#06a4dd, #02ff56); 
         top: 0;
         right: -100%;
         max-width: 300px;
         padding: 50px 50px;
         transition: .3s linear;
+        box-shadow: 2px 2px 5px wheat;
     }
 
     .navbar-menu a{
@@ -231,15 +332,20 @@ hr{
     .navbar-menu.active{
         right: 0;
     }
+
+    .menu-toggle{
+        display: block;
+    }
     .menu-toggle.active span:nth-child(1){
-        transform: rotate(-45deg);
-        top: 4px;
+       transform: rotate(-405deg);
+        top: 9px;
     }
     .menu-toggle.active span:nth-child(2){
+        transform: rotate(360deg);
         opacity: 0;
     }
     .menu-toggle.active span:nth-child(3){
-        transform: rotate(45deg);
-        bottom: 14px;
+        transform: rotate(405deg);
+        bottom: 9px;
     }
 }
