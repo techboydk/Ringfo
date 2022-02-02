@@ -250,10 +250,10 @@ i{
 
 @media screen and (max-width: 768px){
     #home .card{
-        width: 150px;
+        width: 220px;
     }
     #home .card img{
-        width: 150px;
+        width: 220px;
     }
 }
 
