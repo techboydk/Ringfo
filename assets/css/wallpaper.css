@@ -16,6 +16,7 @@ body{
     box-sizing: border-box;
     transition: .3s linear;
     box-shadow: 0 2px 5px #3d3d3d;
+    z-index: 999;
 }
 
 .inner-width{
@@ -162,7 +163,7 @@ i{
     padding-right: 10px;
 }
 
-@media screen and (max-width: 3000px) {
+@media screen and (max-width: 2000px) {
     .navbar-menu{
         position: fixed;
         height: 100vh;
@@ -258,7 +259,7 @@ i{
 
 .copyright h3{
     text-shadow: 2px 2px 5px #000000;
-    position: relative;
+    position:static;
     text-align: center;
     background-color: rgb(255, 255, 255);
     padding: 5px 0;

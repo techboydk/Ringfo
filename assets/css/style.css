@@ -111,8 +111,7 @@ i{
     padding-right: 10px;
 }
 #home{
-    height: 100vh;
-    min-height: 500px;
+    min-height: 100vh;
 }
 
 #home .inner-width{
@@ -214,7 +213,7 @@ hr{
         position: fixed;
         height: 100vh;
         width: 100%;
-        background-color: #0000009f;
+        background-color: #000000;
         top: 0;
         right: -100%;
         max-width: 300px;
