@@ -81,6 +81,21 @@ body{
     transition: .2s linear;
 }
 
+.credit{
+  position: fixed;
+  font-family: Verdana;
+  display: block;
+  margin: 60vh 0 0 0;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+  padding: 5px 0;
+  bottom: 0;
+}
+.credit h4{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
 .navbar-menu a.active{
     background: #7067ebb0;
     color: rgb(255, 253, 253);
