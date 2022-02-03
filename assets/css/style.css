@@ -363,7 +363,9 @@ hr{
     .navbar-menu.active{
         right: 0;
     }
-
+    .fixed{
+      overflow: hidden;
+    }
     .menu-toggle{
         display: block;
     }
