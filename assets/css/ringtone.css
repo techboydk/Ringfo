@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #bef6f8;
+    background: -webkit-linear-gradient(45deg,#3260faaf,#02fa5586 20%,#11bcff86 50%, #d502ff); 
 }
 .navbar{
     position: relative;
@@ -115,7 +115,7 @@ body{
     border: none;
     cursor: pointer;
     outline: none;
-    z-index: 999;
+    z-index: 1000;
     display: block;
 }
 
@@ -128,6 +128,7 @@ body{
     box-sizing: border-box;
     box-shadow: 2px 2px 5px #3f3f3f;
     transition: .3s linear;
+    z-index: 999;
 }
 
 .navbar-menu a{
@@ -139,6 +140,7 @@ body{
     padding: 8px 7px;
     margin-left: 30px;
     transition: .2s linear;
+    z-index: 999;
 }
 
 .navbar-menu a.active{
@@ -166,6 +168,7 @@ i{
         height: 100vh;
         width: 100%;
         background-color: #000000;
+        z-index: 999;
         top: 0;
         right: -100%;
         max-width: 300px;
@@ -199,18 +202,82 @@ i{
 }
 
 #home{
-    height: 100vh;
-    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
+
+#home .text{
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(56, 55, 54);
+    text-align: center;
+}
+
+#home .card{
+    position: relative;
+    margin: 10px 10px;
+    overflow: hidden;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background: -webkit-linear-gradient(45deg,#3260faaf,#02fa5586 20%,#11bcff86 50%, #d502ff); 
+
+}
+
+.inner-width{
+    margin: auto;
+}
+
+.card .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playbutton{
+    display: inline-block;
+    font-size: 40px;
+    color: black;    
+    width: 50px;
+}
+#home .playbutton i{
+    cursor: pointer;
+}
+
+#home .tittle{
+    font: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#home .download{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    float: left;
+    padding: 8px 7px;
+    margin-left: 30px;
+    transition: .2s linear;
+    font-family: cursive;
+    font-size: 20px;
+
+}
+
 .copyright h3{
     text-shadow: 2px 2px 5px #000000;
+    position:static;
     text-align: center;
     background-color: rgb(255, 255, 255);
     padding: 5px 0;
+    bottom: 0;
 }
 
 hr{
     display: block;
-    margin: 0 35% 0.5em;
+    margin: 30px 35% 4px;
     opacity: .3;
 }
