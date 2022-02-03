@@ -128,6 +128,37 @@ i{
     width: 100%;
 }
 
+# .content h2{
+  font-size: 40px;
+  margin-top: 100px;
+  text-shadow: 3px 2px 5px #000000b1;
+}
+
+#home .content h2::after{
+  content: "Hi I'm";
+  font-size: 40px;
+  margin-top: 100px;
+  text-shadow: 3px 2px 5px #000000b1;
+  animation: textanima 10s linear infinite;
+  background: -webkit-radial-gradient(ellipse,#eb01df,#045e5e,#f80303);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes textanima{
+  50%{
+    content: "A";
+    background: -webkit-radial-gradient(ellipse,#eb01d8,#0110e7,#ff00f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100%{
+    content: "A";
+    background: -webkit-radial-gradient(ellipse,#01ebeb,#5c5a0b,#41161a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 #home .content h1{
     font-size: 50px;
     margin-bottom: 50px;
