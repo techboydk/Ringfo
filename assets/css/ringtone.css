@@ -179,7 +179,9 @@ i{
         margin: 30px 0;
         float: none;
     }
-
+    .fixed{
+      overflow: hidden;
+    }
     .navbar-menu.active{
         right: 0;
     }
