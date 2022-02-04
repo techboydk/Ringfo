@@ -52,4 +52,14 @@ function play_pause4(){
 function play_pause5(){
     play_pause("icon5", "audio5");
 }
-
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+        else{
+          audios[i].play();
+        }
+    }
+}, true);
