@@ -13,6 +13,14 @@ $(document).ready(function () {
         else {
             $(this).parent().find('audio')[0].pause();
         }
+        var audios = $(this).parent().find('audio')[0];
+        var t = setInterval(function(){
+            if(audios.currentTime == audios.duration){
+                $('.playbutton').addClass('fa-play-circle');
+                $('.playbutton').removeClass('fa-pause-circle');
+                clearInterval(t);
+            }
+        },1);
     });
 });
 
