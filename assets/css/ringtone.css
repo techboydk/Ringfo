@@ -243,8 +243,9 @@ i{
     font-size: 40px;
     color: black;    
     width: 50px;
+
 }
-#home .playbutton i{
+#home i{
     cursor: pointer;
 }
 
