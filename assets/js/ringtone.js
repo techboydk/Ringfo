@@ -3,63 +3,37 @@ $(document).ready(function(){
         $(this).toggleClass("active");
         $(".navbar-menu").toggleClass("active");
         $("body").toggleClass("fixed");
-    })
-})
+    });
 
-function play_pause(icon_id, audio_id){
-    var icon_class = document.getElementById(icon_id);
-    var myaudio = document.getElementById(audio_id);
-    if(icon_class.classList.contains('fa-pause-circle')){
-        document.getElementById(icon_id).classList.remove("fa-pause-circle");
-        document.getElementById(icon_id).classList.add("fa-play-circle");
-        myaudio.pause();
-    }
-    else{
-        document.getElementById(icon_id).classList.remove("fa-play-circle");
-        document.getElementById(icon_id).classList.add("fa-pause-circle");
-        myaudio.play();
-    }
-
-    function pause_icon(){
-        var y = document.getElementById(audio_id).currentTime;
-        var x = document.getElementById(audio_id).duration;
-        if (x ==y){
-            document.getElementById(icon_id).classList.remove("fa-pause-circle");
-            document.getElementById(icon_id).classList.add("fa-play-circle");
-            clearInterval(t);
+    $('i').click(function(){
+        $(this).toggleClass('fa-pause-circle fa-play-circle');
+        if($(this).hasClass('fa-pause-circle')){
+            $(this).parent().find('audio')[0].play();
         }
-    }
-    var t=setInterval(pause_icon, 1);
-}
+        else{
+            $(this).parent().find('audio')[0].pause();
+        }  
+    });
+});
 
-function play_pause1(){
-    play_pause("icon1", "audio1");
-}
 
-function play_pause2(){
-    
-    play_pause("icon2", "audio2");
-}
-
-function play_pause3(){
-    play_pause("icon3", "audio3");
-}
-
-function play_pause4(){
-    play_pause("icon4", "audio4");
-}
-
-function play_pause5(){
-    play_pause("icon5", "audio5");
-}
 document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
     for(var i = 0, len = audios.length; i < len;i++){
         if(audios[i] != e.target){
             audios[i].pause();
-        }
-        else{
-          audios[i].play();
+            audios[i].currentTime = 0;
         }
     }
 }, true);
+
+document.addEventListener('click', function(e){
+    var icons = document.getElementsByClassName('playbutton');
+    for(var i = 0, len = icons.length; i < len;i++){
+        if(icons[i] != e.target){
+            icons[i].classList.add('fa-play-circle');
+            icons[i].classList.remove('fa-pause-circle');
+        }
+    }
+}, true);
+
