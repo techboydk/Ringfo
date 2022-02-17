@@ -14,22 +14,21 @@ function createCard(songname) {
     const div3 = createElement('div', 'tittle');
     const div4 = createElement('div', 'download');
     const audio = createElement('audio', 'audio');
-    const icon = createElement('i', 'fa fa-play-circle playbutton');
+    const icon1 = createElement('i', 'fa fa-play-circle playbutton');
     const h41 = createElement('h4', '');
-    const h42 = createElement('h4', '');
+    const icon2 = createElement('i', 'fas fa-download');
     const download = createElement('a', 'link');
     audio.src = "https://techboydk.github.io/Ringfo-lib/ringtones/" + songname;
     download.href = "https://github.com/techboydk/Ringfo-lib/blob/main/ringtones/" + songname + "?raw=true";
     h41.innerHTML = songname.replace('.mp3', ' ');
-    h42.innerHTML = 'Download';
     div1.appendChild(div2);
     div2.appendChild(audio);
-    div2.appendChild(icon);
+    div2.appendChild(icon1);
     div2.appendChild(div3);
     div2.appendChild(div4);
     div3.appendChild(h41);
     div4.appendChild(download);
-    download.appendChild(h42);
+    download.appendChild(icon2);
     const section = document.getElementById("home");
     section.appendChild(div1);
 }
