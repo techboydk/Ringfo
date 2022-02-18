@@ -54,7 +54,7 @@ $(document).ready(function() {
         $("body").toggleClass("fixed");
     });
 
-    $('i').click(function() {
+    $('.playbutton').click(function() {
         $(this).toggleClass('fa-pause-circle fa-play-circle');
         if ($(this).hasClass('fa-pause-circle')) {
             $(this).parent().find('audio')[0].play();
@@ -87,3 +87,17 @@ document.addEventListener('play', function(e) {
         }
     }
 }, true);
+
+
+window.onscroll = function() { myFunction() };
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}

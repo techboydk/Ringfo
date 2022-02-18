@@ -18,6 +18,14 @@ body {
     box-sizing: border-box;
     transition: .3s linear;
     box-shadow: 0 2px 5px #3d3d3d;
+    z-index: 999;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0;
 }
 
 .inner-width {
@@ -211,20 +219,23 @@ i {
 }
 
 #home .text {
-    margin: 20px 0 0 20px;
+    margin: 70px 0 0 20px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(56, 55, 54);
     text-align: center;
+    display: block;
+    position: relative;
 }
 
 #home .card {
-    position: relative;
-    margin: 10px 10px;
+    position: sticky;
+    display: inline-flexbox;
+    margin: 15px 10px;
     overflow: hidden;
     padding: 5px 20px;
     box-sizing: border-box;
-    border: 1px solid;
+    border: 2px solid rgb(255, 208, 0);
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgb(0, 0, 0);
     background: -webkit-linear-gradient(45deg, #3260faaf, #02fa5586 20%, #11bcff86 50%, #d502ff);
@@ -284,8 +295,8 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-    .card {
-        width: 48..%;
-        display: inline-block;
+    #home .card {
+        min-width: 10%;
+        display: inline-table;
     }
 }

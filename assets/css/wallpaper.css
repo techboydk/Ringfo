@@ -21,6 +21,13 @@ body {
     z-index: 999;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
 .inner-width {
     margin: auto;
 }
@@ -215,11 +222,13 @@ i {
 }
 
 #home .text {
-    margin: 20px 0 0 20px;
+    margin: 70px 0 0 20px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(56, 55, 54);
     text-align: center;
+    display: block;
+    position: relative;
 }
 
 #home .wallpapers {
