@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 
 
-const imgnameList = ['Allu Arjun.jpg',
+const imgNameList = ['Allu Arjun.jpg',
     'Hanuman - black background.jpg',
     'Lotus Flower ! Light Pink Lotus.jpg',
     'Lotus Flower ! Pink ! Lotus ! Flower.jpg',
@@ -32,7 +32,7 @@ function createElement(name, classList) {
     console.log(element);
 }
 
-function createCard(imgname) {
+function createCard(imgname, downloadUrl) {
     const div1 = createElement('div', 'card');
     const div2 = createElement('div', 'download');
     const a1 = createElement('a', 'view');
@@ -41,7 +41,7 @@ function createCard(imgname) {
     const img = createElement('img', '');
     a1.href = "https://raw.githubusercontent.com/techboydk/Ringfo-lib/main/wallpapers/" + imgname;
     a1.target = "_blank";
-    a2.href = "https://raw.githubusercontent.com/techboydk/Ringfo-lib/main/wallpapers/" + imgname;
+    a2.href = downloadUrl;
     a2.download = imgname;
     img.alt = imgname;
     img.src = "https://raw.githubusercontent.com/techboydk/Ringfo-lib/main/wallpapers/" + imgname;
@@ -55,11 +55,25 @@ function createCard(imgname) {
     div2.appendChild(span);
 }
 
+async function downloadImage(imgNameList) {
+    const commonPartUrl = "https://techboydk.github.io/Ringfo-lib/wallpapers/";
+    let len = imgNameList.length;
+    for (i = 0; i < len; i++) {
+        const url = commonPartUrl + imgNameList[i];
+        const image = await fetch(url);
+        const imageBlog = await image.blob();
+        const imageUrl = URL.createObjectURL(imageBlog);
+        createCard(imgNameList[i], imageUrl);
+    }
+
+}
+downloadImage(imgNameList);
+
 function displayimg() {
 
-    let length = imgnameList.length;
+    let length = imgNameList.length;
     for (var i = 0; i < length; i++) {
-        createCard(imgnameList[i]);
+
     }
 }
 //calling fuction
