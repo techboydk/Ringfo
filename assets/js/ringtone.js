@@ -1,6 +1,7 @@
 //songname list
-const songName = ['Aaj Waqt Tumra Hai - Rajkumar - Hindi Dialogue.mp3','Arey Yaar Ek Aur Message Message - Funny.mp3','Atrangi re-Rait Zara Si.mp3','Badam Badam.mp3','Bas Tum Mere Paas Raho - Instrumental Song.mp3','Chal Di Kudi - Harrdy Sandhu.mp3','Dil Ko Karaar Aaya - Siddharth Shukla.mp3','Excuses Reverb Lofi.mp3','Gori Tere Jiya Hor Na Koi Milya.mp3','Gujar Na Jaye Ye Din - Hindi Song.mp3','Helicopter Helicopter - CLC.mp3','Hope Most Eligible Bachelor.mp3','Hum unse mohabbat karke.mp3','Jorthaale - Dhanush.mp3','KGF Mass Attitude Hindi Dialogue.mp3','KGF.mp3','Krishna - Hindi Dialogue.mp3','Love Me Like you do.mp3','Love Nwantiti - Remix.mp3','Maa o meri maa.mp3','Manadhoram Oru Kaayam - Mudhal Nee Mudivum Nee ! Sid Sriram ! Tamil Song.mp3','Meri Maa Ke Barabar Kohi Nahi - Jubin Nautiyal ! Devotional ! Hindi.mp3','Money heist.mp3','Pachhataoge flute BGM.mp3','Pirates BGM - Hollywood BGM.mp3','Popular English Songs.mp3','Pushpa ! Dialogue ! Hindi ! Allu Arjun.mp3','Pushpa First Song Bgm.mp3','Radha Krishna - Flute.mp3','Radhe Radhe Radhe Bol.mp3','Romantic.mp3','Saiyaara - Instrumental.mp3','Sajaunga Lut Kar Bhi Teri Badan Ki Dali Ko - Remix.mp3',
-  'Sajda Tera Kar Naa Sakun Vo Bandagi Kya Bandagi-Raabta.mp3','Sia Unstoppable.mp3','Sigma Rule - Akuran Remix.mp3','Snehithane Snehithane - Remix.mp3','Suna Hai Teri Taqdeeron Mein - Female Version ! Sad ! Hindi.mp3','The Villagers - Sumit Goswami.mp3','Tu Antaryami Sabka Swami.mp3','Tu Mile Dil Khile - Flute.mp3','Tumse Pyaar Karke - Tulsi Kumar ! Hindi Song.mp3','khusabu se teri mahake .mp3','mehafil me teri ham na rhe jo.mp3'];
+const songName = ['Aaj Waqt Tumra Hai - Rajkumar - Hindi Dialogue.mp3', 'Arey Yaar Ek Aur Message Message - Funny.mp3', 'Atrangi re-Rait Zara Si.mp3', 'Badam Badam.mp3', 'Bas Tum Mere Paas Raho - Instrumental Song.mp3', 'Chal Di Kudi - Harrdy Sandhu.mp3', 'Dil Ko Karaar Aaya - Siddharth Shukla.mp3', 'Excuses Reverb Lofi.mp3', 'Gori Tere Jiya Hor Na Koi Milya.mp3', 'Gujar Na Jaye Ye Din - Hindi Song.mp3', 'Helicopter Helicopter - CLC.mp3', 'Hope Most Eligible Bachelor.mp3', 'Hum unse mohabbat karke.mp3', 'Jorthaale - Dhanush.mp3', 'KGF Mass Attitude Hindi Dialogue.mp3', 'KGF.mp3', 'Krishna - Hindi Dialogue.mp3', 'Love Me Like you do.mp3', 'Love Nwantiti - Remix.mp3', 'Maa o meri maa.mp3', 'Manadhoram Oru Kaayam - Mudhal Nee Mudivum Nee ! Sid Sriram ! Tamil Song.mp3', 'Meri Maa Ke Barabar Kohi Nahi - Jubin Nautiyal ! Devotional ! Hindi.mp3', 'Money heist.mp3', 'Pachhataoge flute BGM.mp3', 'Pirates BGM - Hollywood BGM.mp3', 'Popular English Songs.mp3', 'Pushpa ! Dialogue ! Hindi ! Allu Arjun.mp3', 'Pushpa First Song Bgm.mp3', 'Radha Krishna - Flute.mp3', 'Radhe Radhe Radhe Bol.mp3', 'Romantic.mp3', 'Saiyaara - Instrumental.mp3', 'Sajaunga Lut Kar Bhi Teri Badan Ki Dali Ko - Remix.mp3',
+    'Sajda Tera Kar Naa Sakun Vo Bandagi Kya Bandagi-Raabta.mp3', 'Sia Unstoppable.mp3', 'Sigma Rule - Akuran Remix.mp3', 'Snehithane Snehithane - Remix.mp3', 'Suna Hai Teri Taqdeeron Mein - Female Version ! Sad ! Hindi.mp3', 'The Villagers - Sumit Goswami.mp3', 'Tu Antaryami Sabka Swami.mp3', 'Tu Mile Dil Khile - Flute.mp3', 'Tumse Pyaar Karke - Tulsi Kumar ! Hindi Song.mp3', 'khusabu se teri mahake .mp3', 'mehafil me teri ham na rhe jo.mp3'
+];
 
 function createElement(name, classList) {
     const element = document.createElement(name);
@@ -37,8 +38,21 @@ function createCard(songname) {
 function displayRingtone() {
     RingtoneNameList = songName;
     let lenght = RingtoneNameList.length;
+    let songname = '';
     for (var i = 0; i < lenght; i++) {
-        createCard(RingtoneNameList[i]);
+        let toneName = RingtoneNameList[i].split(" ");
+        const size = toneName.length;
+        for (var j = 0; j < size; j++) {
+            if (j < 3) {
+                if (toneName[j] == '-') {
+                    continue;
+                } else {
+                    songname += toneName[j] + " ";
+                }
+            }
+        }
+        createCard(songname);
+        songname = '';
     }
 }
 
