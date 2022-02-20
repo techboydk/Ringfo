@@ -25,8 +25,8 @@ function createCard(songname, url) {
     h41.innerHTML = songname.replace('.mp3', ' ');
     div1.appendChild(div2);
     div2.appendChild(audio);
-    div2.appendChild(icon1);
     div2.appendChild(div3);
+    div2.appendChild(icon1);
     div2.appendChild(div4);
     div3.appendChild(h41);
     div4.appendChild(download);
@@ -70,8 +70,8 @@ $(document).ready(function() {
     });
 
     $('.playbutton').click(function() {
-        $(this).toggleClass('fa-pause-circle fa-play-circle');
-        if ($(this).hasClass('fa-pause-circle')) {
+        $(this).toggleClass('fa-dharmachakra fa-play-circle');
+        if ($(this).hasClass('fa-dharmachakra')) {
             $(this).parent().find('audio')[0].play();
         } else {
             $(this).parent().find('audio')[0].pause();
@@ -80,7 +80,7 @@ $(document).ready(function() {
         var t = setInterval(function() {
             if (audios.currentTime == audios.duration) {
                 $('.playbutton').addClass('fa-play-circle');
-                $('.playbutton').removeClass('fa-pause-circle');
+                $('.playbutton').removeClass('fa-dharmachakra');
                 clearInterval(t);
             }
         }, 1);
@@ -98,7 +98,7 @@ document.addEventListener('play', function(e) {
             icons[i]
             audios[i].currentTime = 0;
             icons[i].classList.add('fa-play-circle');
-            icons[i].classList.remove('fa-pause-circle');
+            icons[i].classList.remove('fa-dharmachakra');
         }
     }
 }, true);
