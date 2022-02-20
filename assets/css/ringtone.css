@@ -237,7 +237,7 @@ i {
     box-sizing: border-box;
     border: 2px solid rgb(255, 208, 0);
     border-radius: 20px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
     background: -webkit-linear-gradient(45deg, #3260faaf, #02fa5586 20%, #11bcff86 50%, #d502ff);
 }
 
