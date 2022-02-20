@@ -10,7 +10,7 @@ function createElement(name, classList) {
 }
 
 //creating html element for song container
-function createCard(songname) {
+function createCard(songname, url) {
     const div1 = createElement('div', 'card');
     const div2 = createElement('div', 'inner-width');
     const div3 = createElement('div', 'tittle');
@@ -20,8 +20,8 @@ function createCard(songname) {
     const h41 = createElement('h4', '');
     const icon2 = createElement('i', 'fas fa-download');
     const download = createElement('a', 'link');
-    audio.src = "https://techboydk.github.io/Ringfo-lib/ringtones/" + songname;
-    download.href = "https://github.com/techboydk/Ringfo-lib/blob/main/ringtones/" + songname + "?raw=true";
+    audio.src = "https://techboydk.github.io/Ringfo-lib/ringtones/" + url;
+    download.href = "https://github.com/techboydk/Ringfo-lib/blob/main/ringtones/" + url + "?raw=true";
     h41.innerHTML = songname.replace('.mp3', ' ');
     div1.appendChild(div2);
     div2.appendChild(audio);
@@ -51,7 +51,7 @@ function displayRingtone() {
                 }
             }
         }
-        createCard(songname);
+        createCard(songname, RingtoneNameList[i]);
         songname = '';
     }
 }
