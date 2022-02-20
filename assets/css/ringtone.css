@@ -6,12 +6,12 @@
 }
 
 body {
-    background: -webkit-linear-gradient(45deg, #3260faaf, #02fa5586 20%, #11bcff86 50%, #d502ff);
+    background: #e4e4e4;
 }
 
 .navbar {
     position: relative;
-    background-color: #ae81f7;
+    background-color: #555bff;
     margin: auto;
     overflow: hidden;
     padding: 0px 20px;
@@ -230,15 +230,17 @@ i {
 
 #home .card {
     position: sticky;
-    display: inline-flexbox;
+    display: inline-block;
     margin: 15px 10px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     padding: 5px 20px;
     box-sizing: border-box;
-    border: 2px solid rgb(255, 208, 0);
+    border: 2px solid rgb(253 255 0 / 40%);
     border-radius: 20px;
-    box-shadow: 0px 0px 5px rgb(0, 0, 0);
-    background: -webkit-linear-gradient(45deg, #3260faaf, #02fa5586 20%, #11bcff86 50%, #d502ff);
+    box-shadow: 0 0 5px rgb(111 111 111);
+    background: -webkit-linear-gradient(45deg, #199f00, #ffffff 20%, #ffffff, #ffffff, #efeded, white, #ff0101)
 }
 
 .inner-width {
@@ -246,8 +248,10 @@ i {
 }
 
 .card .inner-width {
-    display: flex;
+    display: block;
+    position: sticky;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
 }
 
@@ -260,23 +264,31 @@ i {
 
 #home i {
     cursor: pointer;
+    margin-top: 6px;
+    position: sticky;
+    color: #0009fb;
 }
 
 #home .tittle {
     font: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 28px;
+    box-sizing: border-box;
 }
 
 #home .download {
-    font-size: 15px;
+    /* font-size: 15px; */
     font-weight: 500;
     display: block;
     float: left;
     padding: 8px 7px;
-    margin-left: 30px;
+    margin-left: 58px;
+    margin-top: 41px;
     transition: .2s linear;
     font-family: cursive;
     font-size: 20px;
+    position: sticky;
+    bottom: 0;
 }
 
 .copyright h3 {
