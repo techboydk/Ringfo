@@ -278,7 +278,7 @@ i {
 
 #home .fa-dharmachakra {
     transform-origin: 40% 50%;
-    animation: rotate 1s linear infinite;
+    animation: rotate 1.5s linear infinite;
 }
 
 @keyframes rotate {
