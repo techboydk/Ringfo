@@ -216,6 +216,8 @@ i {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    display: block;
+    position: relative;
 }
 
 #home .text {
@@ -229,13 +231,16 @@ i {
 }
 
 #home .card {
-    position: sticky;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
     display: inline-block;
-    margin: 15px 10px;
+    margin: 20px 0 0 20px;
     width: 200px;
     height: 200px;
     overflow: hidden;
-    padding: 5px 20px;
+    padding: 5px 10px;
     box-sizing: border-box;
     border: 2px solid rgb(253 255 0 / 40%);
     border-radius: 20px;
@@ -248,11 +253,12 @@ i {
 }
 
 .card .inner-width {
-    display: block;
-    position: sticky;
+    display: grid;
+    position: relative;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
+    height: 175px;
+    justify-content: space-evenly;
 }
 
 .playbutton {
@@ -264,15 +270,31 @@ i {
 
 #home i {
     cursor: pointer;
-    margin-top: 6px;
-    position: sticky;
+    margin-left: 66px;
+    margin-top: 11px;
+    position: absolute;
     color: #0009fb;
+}
+
+#home .fa-dharmachakra {
+    transform-origin: 40% 50%;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 #home .tittle {
     font: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 28px;
+    margin-top: -17px;
+    margin-left: 0px;
     box-sizing: border-box;
 }
 
@@ -282,13 +304,212 @@ i {
     display: block;
     float: left;
     padding: 8px 7px;
-    margin-left: 58px;
-    margin-top: 41px;
+    margin-left: 0px;
+    margin-top: 62px;
     transition: .2s linear;
     font-family: cursive;
     font-size: 20px;
     position: sticky;
     bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #home .card {
+        width: 200px;
+        height: 200px;
+    }
+    #home .inner-width {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    #home .card {
+        width: 185px;
+        height: 185px;
+    }
+    #home .inner-width {
+        height: 165px;
+    }
+    #home .download {
+        margin: 52px 0 0 -9px;
+    }
+    #home .playbutton {
+        margin: 20px 0 0 62px;
+    }
+    #home .tittle {
+        margin: -20px 0 0 0px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #home .card {
+        width: 180px;
+        height: 180px;
+    }
+    #home .inner-width {
+        height: 160px;
+    }
+    #home .download {
+        margin: 51px 0 0 -19px;
+    }
+    #home .playbutton {
+        margin: 14px 0 0 62px;
+    }
+    #home .tittle {
+        margin: -30px 0 0 0px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #home .card {
+        width: 160px;
+        height: 160px;
+    }
+    #home .inner-width {
+        height: 140px;
+    }
+    #home .download {
+        margin: 51px 0 0 -32px;
+        font-size: 17px;
+    }
+    #home .playbutton {
+        margin: 4px 0 0 45px;
+        font-size: 40px;
+    }
+    #home .tittle {
+        margin: -17px 0 0 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #home .card {
+        width: 220px;
+        height: 220px;
+    }
+    #home .inner-width {
+        height: 200px;
+    }
+    #home .download {
+        margin: 103px 0 0 23px;
+    }
+    #home .playbutton {
+        margin: 6px 0 0 81px;
+        font-size: 40px;
+    }
+    #home .tittle {
+        margin: -15px 0 0 0px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #home .card {
+        width: 200px;
+        height: 200px;
+    }
+    #home .inner-width {
+        height: 180px;
+    }
+    #home .download {
+        margin: 83px 0 0 2px;
+    }
+    #home .playbutton {
+        margin: 3px 0 0 72px;
+    }
+    #home .tittle {
+        margin: -17px 0 0 0px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #home .card {
+        width: 180px;
+        height: 180px;
+    }
+    #home .inner-width {
+        height: 160px;
+    }
+    #home .download {
+        margin: 107px 0 0 119px;
+    }
+    #home i {
+        margin: 0px 0 0 0px;
+    }
+    #home .tittle {
+        margin: -8px 0 0 0px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #home .card {
+        width: 160px;
+        height: 160px;
+    }
+    #home .inner-width {
+        height: 140px;
+    }
+    #home .download {
+        margin: 79px 0 0 97px;
+        font-size: 18px;
+    }
+    #home .playbutton {
+        margin: 6px 0 0 47px;
+        font-size: 34px;
+    }
+    #home .tittle {
+        margin: -8px 0 0 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #home .card {
+        width: 140px;
+        height: 140px;
+    }
+    #home .inner-width {
+        height: 120px;
+    }
+    #home .download {
+        margin: 71px 0 0 79px;
+        font-size: 16px;
+    }
+    #home .playbutton {
+        margin: 15px 0 0 40px;
+        font-size: 32px;
+    }
+    #home .tittle {
+        margin: 0px 0 0 4px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #home .card {
+        width: 120px;
+        height: 120px;
+    }
+    #home .inner-width {
+        height: 100px;
+    }
+    #home .download {
+        margin: 56px 0 0 62px;
+        font-size: 16px;
+    }
+    #home .playbutton {
+        margin: 12px 0 0 30px;
+        font-size: 30px;
+    }
+    #home .tittle {
+        margin: 0px 0 0 0px;
+        font-size: 10px;
+    }
 }
 
 .copyright h3 {
