@@ -418,7 +418,7 @@ i {
         margin: 83px 0 0 2px;
     }
     #home .playbutton {
-        margin: 3px 0 0 72px;
+        margin: 4px 0 0 57px;
     }
     #home .tittle {
         margin: -17px 0 0 0px;
@@ -435,13 +435,13 @@ i {
         height: 160px;
     }
     #home .download {
-        margin: 107px 0 0 119px;
+        margin: 59px 0 0 -15px;
     }
-    #home i {
-        margin: 0px 0 0 0px;
+    #home .playbutton {
+        margin: 3px 0 0 57px;
     }
     #home .tittle {
-        margin: -8px 0 0 0px;
+        margin: -24px 0 0 0px;
         font-size: 14px;
     }
 }
@@ -525,11 +525,4 @@ hr {
     display: block;
     margin: 30px 35% 4px;
     opacity: .3;
-}
-
-@media screen and (min-width: 768px) {
-    #home .card {
-        min-width: 10%;
-        display: inline-table;
-    }
 }
