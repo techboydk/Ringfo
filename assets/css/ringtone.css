@@ -305,11 +305,25 @@ i {
     float: left;
     padding: 8px 7px;
     margin-left: 0px;
-    margin-top: 62px;
+    margin-top: 71px;
     transition: .2s linear;
     font-family: cursive;
     font-size: 20px;
     position: sticky;
+    bottom: 0;
+}
+
+#home .time {
+    font-weight: 500;
+    display: block;
+    float: left;
+    padding: 8px 7px;
+    margin-left: -10px;
+    margin-bottom: -13px;
+    transition: .2s linear;
+    font-family: cursive;
+    font-size: 15px;
+    position: absolute;
     bottom: 0;
 }
 
